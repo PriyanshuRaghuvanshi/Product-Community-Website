@@ -1,0 +1,69 @@
+<div class="main">
+    <div class="header">
+                <button mat-icon-button color="primary" (click)="routerHome()">
+                    Home
+                  </button>
+                <div class="top-right" *ngIf="loggedIn()" style="cursor: pointer;">
+                    <button mat-button color="warn"  (click)="logout()">Logout</button>  
+                </div>
+    </div>
+
+
+    <div class="text-container">
+        <br>
+        <b>
+          <h1 class="text-center" style="font-size: 1.5rem; font-weight: bold;">All Reviews </h1>
+        </b>
+      </div>
+      
+    <!-- <div class="centered" *ngFor="let r of review">
+        
+        <div *ngIf="r.approved && r.approved != null">
+            <mat-card class="example-card">
+                <mat-card-title>{{r.heading}}</mat-card-title>
+                <mat-card-subtitle><ngb-rating style="font-size: 20px;
+                    color:yellow;" [max]="5" [(rate)]="r.rating" [readonly]="true"></ngb-rating></mat-card-subtitle>
+                <mat-card-content>
+                    <p>{{r.review}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div> -->
+    <div class="centered" *ngFor="let r of review">
+        <div *ngIf="r.approved && r.approved != null">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div class="card-header-content">
+                <mat-card-title>{{r.heading}}</mat-card-title>
+                <mat-card-subtitle>
+                  <ngb-rating
+                    [max]="5"
+                    [(rate)]="r.rating"
+                    [readonly]="true"
+                    class="rating-stars"
+                  ></ngb-rating>
+                  
+                </mat-card-subtitle>
+              </div>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{r.review}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-icon-button >
+                <img src="data:image/png;base64,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" alt="Like">
+              </button>
+              <button mat-icon-button >
+                <img src="https://i.pinimg.com/originals/8e/e9/89/8ee989250f90578d44d8888286aaa2c0.jpg" alt="Share">
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+      
+      
+</div>

@@ -1,0 +1,54 @@
+<div class="main-container">
+
+    <form
+      class="example-form"
+      (submit)="addProduct(addPostForm)"
+      #addPostForm="ngForm">
+
+      <mat-form-field class="example-full-width" appearance="fill">
+  
+          <mat-label>Product Name</mat-label>
+  
+        <input 
+          matInput  
+          placeholder="ProductName"  
+          ngModel
+          required name="productName"  
+        />
+  
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Brand</mat-label>
+  
+        <input
+          matInput  
+          placeholder="ProductBrand"  
+          ngModel  
+          required  
+          name="brand"  
+        />
+  
+      </mat-form-field>  
+      <mat-form-field class="example-full-width" appearance="fill">  
+           <mat-label>Product Code</mat-label>
+        <input
+  
+          matInput
+          placeholder="ProductCode"
+          ngModel
+          required
+          name="productCode"
+        />
+
+      </mat-form-field>
+        <div class="example-button-row">
+      
+        <button class="add-button" mat-raised-button type="submit" color="primary" >Add Product</button>
+          <button class="cancel-button" mat-raised-button type="reset" color="warn" routerLink="/admin/products">Cancel</button>
+      </div>
+    
+   
+    </form>
+   
+  </div>
+      

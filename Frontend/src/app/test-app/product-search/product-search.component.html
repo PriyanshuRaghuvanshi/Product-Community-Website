@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="query" placeholder="Search query">
+<button (click)="search()">Search</button>
+
+<ul>
+  <li *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>Code: {{ product.code }}</p>
+    <p>Brand: {{ product.brand }}</p>
+  </li>
+</ul>

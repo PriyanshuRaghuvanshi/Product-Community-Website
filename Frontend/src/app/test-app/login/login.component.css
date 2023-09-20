@@ -1,0 +1,32 @@
+.example-button-row button,
+  .example-button-row a {
+    margin-right: 28px;
+  }
+  .container{
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid black;
+    width: fit-content;
+  }
+  .example-form {
+   
+    width: 400px;
+    
+  }
+
+.newUser{
+    margin-top: 20px;
+}
+
+  .example-full-width {
+    width: 100%;
+    
+  }
+
+  
+  .center-text {
+    text-align: center;
+    margin-top: 25px;
+  }

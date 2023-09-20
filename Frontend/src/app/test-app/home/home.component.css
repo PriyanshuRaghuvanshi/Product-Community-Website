@@ -1,0 +1,202 @@
+
+   
+      .bottom-left,
+      .centered-icon,
+      .bottom-right {
+        flex-basis: 30%;
+        text-align: center;
+      }
+      
+      .material-icons {
+        font-size: 48px;
+        color: #525252;
+      }
+      
+      .stats {
+        margin-top: 20px;
+      }
+      
+      h3 {
+        font-size: 18px;
+        color: #555;
+      }
+     
+      .top-left {
+        position: absolute;
+        top: 60px;
+        left: 16px;
+        color: #000000;
+
+        
+      }
+
+      .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+      }
+      .logout-link {
+        display: flex;
+        align-items: center;
+        background-color: #ff0000;
+        color: rgb(255, 255, 255);
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      
+      .logout-link:hover {
+        background-color: #f44336;
+      }
+      
+      .material-icons {
+        margin-right: 8px;
+        font-size: 18px;
+      }
+
+      .centered {
+        text-align: center;
+        color: #ffffff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+    .main-container {
+      /* background-image: url('https://c4.wallpaperflare.com/wallpaper/413/925/249/minimalism-abstract-pattern-digital-art-wallpaper-preview.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; */
+      height: 70vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+    }
+   
+
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card {
+  width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card-header {
+  background-color: #7389ac;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  text-align: center; 
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.stat {
+  margin-bottom: 10px;
+}
+
+.stat h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333333;
+}
+
+.card-footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-footer p {
+  margin: 0;
+  text-align: center;
+  color: #555555;
+  cursor: pointer;
+}
+
+.card-footer p:hover {
+  text-decoration: none;
+}
+.navbar {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.navbar-left {
+  color: #ffffff;
+}
+
+.welcome-text {
+  font-size: 18px;
+}
+
+.navbar-right {
+  margin-left: auto;
+}
+
+.logout-button {
+  background-color: #a40b0b;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #eaeaea;
+}
+
+.custom-button {
+  width: 150px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.left-login {
+  position: absolute;
+  top: 5cm;
+  left: 8cm;
+  padding: 10px;
+}
+
+.left-login a {
+  color: rgb(172, 34, 34);
+  text-decoration: none;
+}

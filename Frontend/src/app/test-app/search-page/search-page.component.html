@@ -1,0 +1,82 @@
+<!-- <div class="nav" *ngIf="loggedIn()">
+
+     <button class="left-button" routerLink="/"><mat-icon>home</mat-icon></button>
+         <button class="right-button" (click)="logout()">Logout</button>
+</div> -->
+<body>
+<div class="header">
+    <mat-grid-list cols="5" rowHeight="40px">
+        <mat-grid-tile [colspan]=1 [rowspan]=1>
+            
+          <button mat-icon-button color="primary" routerLink="home">
+          
+            Home
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]=4 [rowspan]=1>
+            <div class="top-right" *ngIf="loggedIn()" style="cursor: pointer;"> 
+              <button mat-icon-button color="warn"  (click)="logout()">Logout</button> 
+               
+                </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div class="text-center">
+    <a style="font-weight: bold; font-size: 2rem;">Search for Products</a>
+  </div>
+            <div class="box" *ngIf="loggedIn()">
+            
+                <table class="element">
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        placeholder="search the product"
+                        class="search"
+                      (keyup)="OnInput($event)"
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+             
+              
+              
+              
+              <div class="searchResult" *ngIf="searchedProducts().length > 0 && loggedIn(); ">
+                <table class="searchTable">
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Brand</th>
+                    <th>Product Code</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr *ngFor="let p of searchedProducts()">
+                    <td>{{ p.productName }}</td>
+                    <td>{{ p.brand }}</td>
+                    <td>{{ p.productCode }}</td>
+                    <td>
+                      
+                      <button class="custom-button" (click)="addReview(p.productId)" [routerLink]="'addReview'" style="background-color: green; color: white;">Add Review</button>
+            
+                      <button class="custom-button" (click)="showReview(p.productId)" [routerLink]="'showReview'" style="background-color: yellow; color: black;">Show Reviews</button>
+            
+                    </td>
+                  </tr>
+                </table>
+                <button
+                  style="margin-left: 10px; height: 30px; width:0.5px; border:none; background:none"
+                  (click)="removeFilter()">
+                <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flat_cross_icon.svg/1200px-Flat_cross_icon.svg.png" height="30px"/>
+              
+              </button>
+              </div>
+              <!-- <ng-template #noResults>
+               
+                <div class="noResultsMessage">No products found as per the input entered.</div>
+              </ng-template> -->
+              <div class="else" *ngIf="searchedProducts().length === 0 && loggedIn() && inputFieldValue !== ''">
+                   No product Found as per your input !
+              </div>
+  
+</body>

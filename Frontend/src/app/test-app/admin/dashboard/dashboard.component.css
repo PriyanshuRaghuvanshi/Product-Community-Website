@@ -1,0 +1,71 @@
+.header {
+    background-color: rgb(194, 175, 175);
+  }
+  
+  .content {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/268/726/529/stroke-artwork-abstract-coloured-lines-wallpaper-preview.jpg");
+    height: 94vh;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .sidebar {
+    color: black;
+    width: 200px;
+  }
+  
+  .top-right {
+    margin-left: 65%;
+  }
+  .grid-container {
+    display: grid;
+  
+    padding: 10px;
+  }
+  
+  .grid-item {
+    color: rgb(245, 245, 247);
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+  }
+  
+  .item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  
+  .item2 {
+    grid-column: 3 / span 35;
+    grid-row: 1 / 4;
+  }
+  
+  .outlets {
+    overflow: scroll;
+    height: 470px;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .logout-button {
+    background-color: black;
+    color: rgb(237, 0, 0);
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-left: 80%;
+  font-size: 18px;
+
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #333333;
+  }
+  
